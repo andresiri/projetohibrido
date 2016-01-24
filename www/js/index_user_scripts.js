@@ -30,38 +30,16 @@
                             '<a>' +
                                 '<h3>' + nome + '</h3>' +
                                 '<p><i class="icon phone"></i>' + telefone + '</p>' +
-                                '<p><i class="icon mail"></i>' + email + '</p>' +
                             '</a>' +
                             '</li>';
                
-               $("#listview-contatos").append(item);
-                   
-               
+               $("#listview-contatos").append(item);                                  
            } 
         });
      }
      
      listarContatos();
-     
-     /* button  #btn-foto */
-    $(document).on("click", "#btn-foto", function(evt)
-    {
-        var fnCapturar = function(imageSrc){
-            var item = '<li><img src="data:image/jpeg;base64,'+imageSrc+'" style="width:100%!important"/></li>';
-        };
-        
-        var fnFalhar = function(error){
-            navigator.notification.alert("Erro ao capturar: " + error, null, "INFORMAÇÃO");
-        };
-        
-        var opcoes = {
-            quality: 75,
-            destinationType: Camera.DestinationType.DATA_URL
-        };                                 
-        
-        navigator.camera.getPicture(fnCapturar, fnFalhar, opcoes);
-    });
-    
+         
         /* button  #btn-capturar-gps */
     $(document).on("click", "#btn-capturar-gps", function(evt)
     {                             
@@ -73,7 +51,7 @@
                 document.getElementById("map"),
                 {
                     center: new google.maps.LatLng(coords.latitude, coords.longitude),
-                    zoom: 20,
+                    zoom: 16,
                     mapTypeId: google.maps.MapTypeId.ROADMAP
                 }
             );                    
@@ -118,6 +96,33 @@
     {
          /*global activate_subpage */
          activate_subpage("#uib_page_2");                 
+    });
+    
+        /* button  #btn-foto */
+    $(document).on("click", "#btn-foto", function(evt)
+    {
+         /*global activate_subpage */
+         activate_subpage("#uib_page_3"); 
+    });
+    
+        /* button  #btn-take-picture */
+    $(document).on("click", "#btn-take-picture", function(evt)
+    {
+        var fnCapturar = function(imageSrc){
+            var item = '<li><img src="data:image/jpeg;base64,'+imageSrc+'" style="width:100%!important"/></li>';
+            $("#listFiles").append(item);
+        };
+        
+        var fnFalhar = function(error){
+            navigator.notification.alert("Erro ao capturar: " + error, null, "INFORMAÇÃO");
+        };
+        
+        var opcoes = {
+            quality: 75,
+            destinationType: Camera.DestinationType.DATA_URL
+        };                                 
+        
+        navigator.camera.getPicture(fnCapturar, fnFalhar, opcoes);
     });
     
     }

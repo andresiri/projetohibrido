@@ -97,39 +97,32 @@
             <div class="upage panel" id="mainpage" data-header="af-header-0" data-footer="af-footer-0">
                 <div class="upage-content content-area vertical-col" id="uib_page_2">
 
-                    <ul class="list widget uib_w_17 d-margins" data-uib="app_framework/listview" data-ver="1" id="listview-contatos">
-                        <li class="widget uib_w_18" data-uib="app_framework/listitem" data-ver="1"><a>List Item</a>
-                        </li>
-
+                    <ul class="list widget uib_w_20 d-margins" data-uib="app_framework/listview" data-ver="1" id="listview-contatos">                        
                     </ul>
                 </div>
 
                 <div id="uib_page_3" class="upage-content vertical-col hidden">
-
-                    <div class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row" data-ver="0">
-                        <div class="col uib_col_2 col-0_12-12" data-uib="layout/col" data-ver="0">
-                            <div class="widget-container content-area vertical-col">
-
-                                <span class="uib_shim"></span>
-                            </div>
-                        </div>
-                        <span class="uib_shim"></span>
-                    </div>
+                    
+                    <a class="button widget uib_w_19 d-margins" data-uib="app_framework/button" data-ver="1" id="btn-take-picture" onclick="capturePhoto();">Tirar foto</a>
+                    <ul class="list widget uib_w_20 d-margins" data-uib="app_framework/listview" data-ver="1" id="listFiles">                        
+                    </ul>
 
                 </div>
+
                 <div id="uib_page_4" class="upage-content vertical-col hidden">
                     <div class="grid grid-pad urow uib_row_3 row-height-3" data-uib="layout/row" data-ver="0">
                         <div class="col uib_col_3 col-0_12-12" data-uib="layout/col" data-ver="0">
                             <div class="widget-container content-area vertical-col">
-                                <div class="widget uib_w_14 maps-size d-margins" data-uib="media/google_maps" data-ver="0" data-rpath="null" data-zoom="8" id="map"></div>
-                                <a class="button widget uib_w_13 d-margins icon error" data-uib="app_framework/button" data-ver="1" id="btn-capturar-gps">Capturar posição GPS</a>
+                                <div class="widget uib_w_14 maps-size d-margins" data-uib="media/google_maps" data-ver="0" data-rpath="null" data-zoom="13" id="map"></div>
 
                                 <span class="uib_shim"></span>
                             </div>
                         </div>
                         <span class="uib_shim"></span>
                     </div>
+                    <a class="button widget uib_w_13 d-margins icon error" data-uib="app_framework/button" data-ver="1" id="btn-capturar-gps">Capturar posição GPS</a>
                 </div>
+
                 <div id="uib_page_5" class="upage-content vertical-col hidden">
                     <div class="grid grid-pad urow uib_row_4 row-height-4" data-uib="layout/row" data-ver="0">
                         <div class="col uib_col_4 col-0_12-12" data-uib="layout/col" data-ver="0">
@@ -159,8 +152,8 @@
 
         </div>
         <footer class="wrap-element uib_w_2" data-uib="app_framework/footer" data-ver="1" id="af-footer-0">
-
-            <a class="widget uib_w_7 d-margins icon user" data-uib="app_framework/button" data-ver="1" id="btn-contato">Contato</a><a class="widget uib_w_6 d-margins icon camera" data-uib="app_framework/button" data-ver="1" id="btn-foto" onclick="capturePhoto();">Foto</a>
+            <a class="widget uib_w_7 d-margins icon user" data-uib="app_framework/button" data-ver="1" id="btn-contato">Contato</a>
+            <a class="widget uib_w_6 d-margins icon camera" data-uib="app_framework/button" data-ver="1" id="btn-foto">Foto</a>
             <a class="widget uib_w_3 d-margins icon right" data-uib="app_framework/button" data-ver="1" id="btn-gps">GPS</a>
 
         </footer>

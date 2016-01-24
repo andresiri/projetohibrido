@@ -339,7 +339,7 @@ body:not(#afui) .upage-outer {
 }
 @media all and (min-width: 0px) {
   #afui .row-height-2 > .col > .content-area {
-    min-height: 100px;
+    min-height: 71px;
   }
 }
 .uib_row_3:not(.cright) > .col {
